@@ -1,0 +1,320 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Editkaro.in - Video Editing & Social Media Marketing Portfolio" />
+		<title>Editkaro.in - Professional Video Editing Portfolio</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<!-- Hero Section with Parallax -->
+		<header class="hero">
+			<div class="hero-overlay"></div>
+			<video class="background-video" autoplay muted loop playsinline>
+				<source
+					src="https://www.w3schools.com/html/mov_bbb.mp4"
+					type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+
+			<div class="hero-content">
+				<h1 class="hero-title">Editkaro.in</h1>
+				<p class="hero-subtitle">
+					Creative Video Editing & Social Media Marketing
+				</p>
+				<a href="#portfolio" class="cta">Explore Our Work</a>
+			</div>
+		</header>
+
+		<!-- Portfolio Section with Filters and Search -->
+		<section id="portfolio" class="portfolio">
+			<h2 class="section-title">Our Portfolio</h2>
+
+			<!-- Search bar inside the portfolio section -->
+			<div class="search-bar">
+				<input
+					type="text"
+					id="portfolioSearch"
+					placeholder="Search videos..."
+					onkeyup="searchPortfolio()" />
+			</div>
+
+			<!-- Filter Controls inside the portfolio -->
+			<div class="filter-controls">
+				<button
+					class="filter-btn active"
+					data-category="all"
+					onclick="filterVideos('all')">
+					All
+				</button>
+				<button
+					class="filter-btn"
+					data-category="short-videos"
+					onclick="filterVideos('short-videos')">
+					Short Videos
+				</button>
+				<button
+					class="filter-btn"
+					data-category="long-videos"
+					onclick="filterVideos('long-videos')">
+					Long Videos
+				</button>
+				<button
+					class="filter-btn"
+					data-category="ads"
+					onclick="filterVideos('ads')">
+					Ads
+				</button>
+				<button
+					class="filter-btn"
+					data-category="gaming"
+					onclick="filterVideos('gaming')">
+					Gaming
+				</button>
+				<button
+					class="filter-btn"
+					data-category="anime"
+					onclick="filterVideos('anime')">
+					Anime
+				</button>
+			</div>
+
+			<!-- Portfolio Grid for videos -->
+			<div class="video-grid" id="videoGrid">
+				<!-- Short Videos -->
+				<div class="video-item" data-category="short-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Short-form Video 1</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="short-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/mov_bbb.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Short-form Video 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="short-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Short-form Video 3</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Long Videos -->
+				<div class="video-item" data-category="long-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/movie.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Long-form Video 1</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="long-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Long-form Video 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="long-videos">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/mov_bbb.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Long-form Video 3</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Ads -->
+				<div class="video-item" data-category="ads">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/movie.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Ad Video 1</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="ads">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Ad Video 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="ads">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/mov_bbb.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Ad Video 3</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gaming Videos -->
+				<div class="video-item" data-category="gaming">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Gaming Video 1</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="gaming">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/movie.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Gaming Video 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="gaming">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Gaming Video 3</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Anime Videos -->
+				<div class="video-item" data-category="anime">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/mov_bbb.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Anime Video 1</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="anime">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Anime Video 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="video-item" data-category="anime">
+					<div class="video-wrapper">
+						<video
+							class="lazy-video"
+							src="https://www.w3schools.com/html/movie.mp4"
+							muted></video>
+						<div class="video-overlay">
+							<p>Anime Video 3</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Improved About Us Section -->
+		<section class="about-us" id="about">
+			<div class="about-container">
+				<h2>About Editkaro.in</h2>
+				<p>
+					We are a team of dedicated professionals specializing in creative
+					video editing and social media marketing. Our goal is to make your
+					brand stand out with engaging, dynamic content tailored to your needs.
+				</p>
+				<a href="#contact" class="cta">Let’s Collaborate</a>
+			</div>
+		</section>
+
+		<!-- Improved Contact Form Section -->
+		<section id="contact" class="contact">
+			<div class="contact-container">
+				<h2>Contact Us</h2>
+				<p>Have a project in mind? We'd love to hear from you!</p>
+				<form id="contact-form" action="submit_form.php" method="POST">
+					<div class="form-group">
+						<input type="text" name="name" placeholder="Your Name" required />
+					</div>
+					<div class="form-group">
+						<input
+							type="email"
+							name="email"
+							placeholder="bjayanth419@gmail.com"
+							required />
+					</div>
+					<div class="form-group">
+						<textarea
+							name="message"
+							placeholder="Tell us about your project"
+							required></textarea>
+					</div>
+					<button type="submit" class="cta">Send Message</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Footer Section -->
+		<footer class="footer">
+			<div class="footer-container">
+				<p>&copy; 2024 Editkaro.in. All rights reserved.</p>
+				<div class="social-links">
+					<a href="#">Facebook</a> | <a href="#">Instagram</a> |
+					<a href="#">Twitter</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JavaScript -->
+		<script src="scripts.js"></script>
+	</body>
+</html>
